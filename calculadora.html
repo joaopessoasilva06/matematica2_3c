@@ -5,8 +5,45 @@
         <link rel="stylesheet" type="text/css">
         <script src="jquery.js"></script>
         <script>
+            //adiciona valor
+            function adicionar(valor){
+                document.getElementById('visor').value += valor;
+            }
+            function limpar(){
+                document.getElementById('visor').value = "";
+            }
+            function calcular(){
+                var visor = document.getElementById('visor');
 
+                try{
+                    visor.value = eval(visor.value);
+                }catch(error){
+                    visor.value = "Erro";
+                }
+            }
         </script>
+        <style>
+            .botao{
+                width:3%;
+                height:1.5%;
+                background-color: grey;
+            }
+            .botaoo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(52, 199, 15);
+            }
+            .botaooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(21, 15, 199);
+            }
+            .botaoooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(199, 15, 168);
+            }
+        </style>
     </head>
     <body>
         <input type="text" id="visor">
@@ -35,7 +72,7 @@
         <button class="botaoo" onclick="adicionar('')";>)</button>
         <button class="botaoo" onclick="adicionar('%')";>%</button>
         <br><br>
-        <button class="botaooo" onclick="limpar()";></button>
-        <button class="botaoooo" onclick="calcular()";></button>
+        <button class="botaooo" onclick="limpar()";>C</button>
+        <button class="botaoooo" onclick="calcular()";>=</button>
     </body>
 </html>
