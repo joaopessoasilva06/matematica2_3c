@@ -12,12 +12,17 @@
         <form action="curriculo.php" method="POST">
             <fieldset>
                 <legend>Curriculo</legend>
-                Nome Completo:<input type="text" required></br>
-                Telefone: <input type="number" required></br>
-                
-                
-                
-                
+                Nome Completo:<input type="text" minlength="15" maxlength="30" placeholder="Nome Completo"  required></br>
+                Telefone: <input type="text" minlength="11" maxlength="15" placeholder="telefone" required></br>
+                Data de nascimento: <input type="date" required></br>
+                Email:<input type="email" minlength="10" maxlength="20" placeholder="email" required></br>
+                Genero: 
+                            M <input type="checkbox">
+                            F <input type="checkbox">
+                            OUTROS <input type="checkbox"></br>
+
+                Informações Adicionais:</br>
+                <textarea></textarea>
                 <input type="submit" value="Joao">
             </fieldset>
         </form>
